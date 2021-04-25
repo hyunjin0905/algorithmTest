@@ -40,17 +40,88 @@ console.log(minData2);
 
 function solution (a, b, c) {
     let answer= "YES", max;
-    let sum = a +_b + c;
+    let sum = a + b + c;
     if (a > b) max = a;
     else max = b;
     if (c > max) max = c;
-
     if ((sum - max) <= max) answer = "NO"
-
-
 
     return answer;
 }
 
-console.log(solution(13,33,17))
+// console.log(solution(13,33,17))
+
+// 연필 개수
+// 12pcs - 1das
+// 1 person - 1pcs
+// n person => n das?
+// 3 person - 1das
+// 13 person - 2das
+// 24 person - 2das
+// 36 person - 3das
+// 48 person - 4das
+// 48 / 12 = 4 === 0
+// 47 / 12 = n -> 반올림
+// 49 / 12 = n -> 반올림
+
+
+const pencilDas = (persons) => {
+    if (persons === 0) return;
+    const oneDas = 12;
+    let dasCount = 0;
+    dasCount = Math.ceil(persons / oneDas);
+
+    return dasCount;
+}
+
+const test1 = pencilDas(13);
+console.log(test1);
+
+const test2 = pencilDas(25);
+console.log(test2);
+
+const test3 = pencilDas(178);
+console.log(test3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
