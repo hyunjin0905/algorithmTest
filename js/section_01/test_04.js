@@ -19,11 +19,28 @@ const searchOddNumber = (numList) => {
 
 const numbers = [12, 77, 38,41, 53, 92, 85];
 
-searchOddNumber(numbers);
+//searchOddNumber(numbers);
 
 // 10 부제
+// 날짜 3일
+// 운전번호 둘째 자리가 같으면 위반
 
 
+const searchStopCar = (date, carNumber ) => {
+
+    let carCount = 0;
+    for (let i of carNumber) {
+        if (i % 10 === date) {
+            carCount++;
+        }
+    }
+
+    console.log(carCount);
+}
+
+const carNumber = [12, 20, 54, 30, 87, 91, 30];
+
+searchStopCar(0, carNumber)
 
 
 
